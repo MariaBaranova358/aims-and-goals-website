@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="/images/Логотип.svg" alt="Логотип" width="77" height="83">
+                </a>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/knowledgebase.html">База знаний</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex">
+                    <img src="/images/account.svg" alt="">
+                    <span>Мария</span>
+                    <a href="/index.html" class="btn ">Выйти</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="py-3">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+
+                        <div class="bg-white p-4 rounded shadow-sm mb-4">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                <div class="d-flex align-items-center mb-3 mb-md-0">
+                                    <img src="/images/account.svg" alt="Аватар" width="40" height="40">
+                                    <div class="ms-3">
+                                        <h3 class="h5 fw-bold mb-0">Мария</h3>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex gap-4">
+                                    <a href="/private-office.html" class="text-decoration-none text-dark small fw-bold ">Личный кабинет</a>
+                                    <a href="/goals.html" class="text-decoration-none text-dark small fw-bold">Мои цели</a>
+                                    <a href="/habits.html" class="text-decoration-none text-dark small fw-bold">Мои привычки</a>
+                                    <a href="/knowledgebase.html" class="text-decoration-none text-dark small fw-bold">База знаний</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card  border-0 shadow-sm">
+                            <div class="card-body p-4">
+
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <h3 class="fw-bold text-dark">Здравствуйте, Мария! Готовы к новым свершениям?
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <h5 class="fw-bold  mb-3">Сводка</h5>
+                                    <div class="col-md-4 mb-2">
+                                        <div class="bg-light p-3 rounded h-100"> 
+                                            <h6 class="fw-bold">Активных целей</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <div class="bg-light p-3 rounded h-100">
+                                            <h6 class="fw-bold">Серия дней выполнения привычек</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <div class="bg-light p-3 rounded h-100">
+                                            <h6 class="fw-bold">Общий процент выполнения привычек за месяц</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <h5 class="fw-bold  mb-3">Ваши планы на сегодня</h5>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <div class="bg-light p-3 rounded h-100">
+                                                    <h6 class="fw-bold">Активные задачи по целям</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="bg-light p-3 rounded h-100">
+                                                    <h6 class="fw-bold">Привычки на день</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="fw-bold mb-3">Ваш прогресс</h5>
+
+                                        <div class="bg-light p-3 rounded mb-3">
+                                            <h6 class="fw-bold mb-2">Статистика по выполнению привычек</h6>
+                                            <div class="bg-white rounded p-3 text-center" style="height: 100px;">
+                                                <div class="d-flex align-items-center justify-content-center h-100">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="bg-light p-3 rounded">
+                                                <h6 class="fw-bold">Статистика по выполнению целей</h6>
+                                                <div class="bg-white rounded p-4 mt-2 text-center"
+                                                    style="height: 500px;">
+                                                    <div class="d-flex align-items-center justify-content-center h-100">
+                                                        <div class="rounded-circle"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="mb-0 small">© 2025 Сайт для создания и отслеживания целей и привычек</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
