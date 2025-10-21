@@ -1,0 +1,133 @@
+:root {
+    --deep-amethyst: #1E0A3A;
+    --moderate-purple: #2D1B69;
+    --lavender: #8B5FBF;
+    --snow-lavender: #E3DAFF;
+    --white: #FFFFFF;
+    --light-text: #B8A1D9;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.navbar {
+    background: var(--white) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link.active {
+    color: var(--lavender) !important;
+    font-weight: 600;
+}
+
+.nav-link {
+    color: var(--deep-amethyst) !important;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-section span {
+    color: var(--deep-amethyst);
+    font-weight: 500;
+}
+
+.text {
+    color: #1E0A3A;
+}
+
+.btn-outline-custom {
+    border: 1px solid var(--lavender);
+    color: var(--lavender);
+}
+
+.btn-outline-custom:hover {
+    background: var(--lavender);
+    color: var(--white);
+}
+
+.btn-primary-custom {
+    background: var(--lavender);
+    border-color: var(--lavender);
+    color: var(--white);
+}
+
+.btn-primary-custom:hover {
+    background: var(--moderate-purple);
+    border-color: var(--moderate-purple);
+}
+
+.main-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.user-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.user-nav a {
+    color: var(--deep-amethyst);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.user-nav a:hover {
+    background: var(--snow-lavender);
+    color: var(--lavender);
+}
+
+.search-input {
+    border-left: none;
+    padding-left: 0;
+}
+
+.search-input:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.input-group-text {
+    background: var(--white);
+    border-right: none;
+}
+
+.empty-state {
+    color: var(--light-text);
+}
+
+.empty-state img {
+    opacity: 0.5;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background: var(--deep-amethyst) !important;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .user-nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .user-section {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

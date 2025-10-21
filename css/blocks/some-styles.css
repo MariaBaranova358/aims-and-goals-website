@@ -1,0 +1,144 @@
+:root {
+    /* Основные цвета */
+    --primary-purple: #A78BFA;
+    --primary-purple-dark: #665499;
+    --primary-purple-light: #cfbeffd2;
+
+    /* Дополнительные цвета */
+    --deep-purple: #29165B;
+    --white: #ffffff;
+
+    /* Оттенки серого */
+    --gray-light: #d4d4d4;
+
+    /* Тени */
+    --shadow-hover: rgba(0, 0, 0, 0.15);
+}
+
+.knowledge__title {
+    font-size: 64px;
+    max-width: 1096px;
+}
+
+.hero-banner {
+    background: url('/images/banner.jpg') center/cover;
+    height: 640px;
+    display: flex;
+    align-items: center;
+}
+
+.img {
+    width: 100%;
+}
+
+.method-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.method-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-hover) !important;
+}
+
+.method-icon {
+    transition: transform 0.3s ease;
+}
+
+.method-card:hover .method-icon {
+    transform: scale(1.1);
+}
+
+.btn {
+    background-color: var(--primary-purple);
+    border: var(--white);
+    color: var(--white);
+}
+
+.btn:hover {
+    background-color: var(--primary-purple-dark);
+}
+
+.btn--outline {
+    background-color: var(--white);
+    color: var(--primary-purple);
+    border: 1px solid var(--primary-purple);
+}
+
+.btn-primary {
+    background-color: var(--primary-purple);
+    border: var(--white);
+}
+
+.btn-outline-primary {
+    border: 1px solid var(--primary-purple);
+    color: var(--primary-purple);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-purple);
+    color: var(--white);
+    border: 1px solid var(--primary-purple);
+}
+
+.btn-light {
+    color: var(--primary-purple-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-purple-dark);
+}
+
+.row.g-4 {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    width: 300px;
+    background-color: var(--primary-purple);
+    align-items: center;
+}
+
+.card-steps {
+    width: 1096px !important;
+    background-color: var(--white) !important;
+    height: 455px;
+    border: 1px solid var(--primary-purple) !important;
+    border-radius: 10px;
+}
+
+.card-body.p-5 {
+    display: flex;
+}
+
+.custom-nav .nav-link {
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    padding: 0;
+    font-size: 20px;
+    color: var(--deep-purple);
+}
+
+.d-flex {
+    gap: 20px;
+    align-items: center;
+}
+
+.container .row .col-lg-10 .card {
+    width: auto;
+    max-width: none;
+    background-color: var(--primary-purple-light);
+}
+
+.container .card {
+    width: auto;
+    max-width: none;
+    background-color: var(--primary-purple-light);
+}
+
+.rounded-circle {
+    background-color: var(--gray-light);
+    width: 420px;
+    height: 420px;
+}

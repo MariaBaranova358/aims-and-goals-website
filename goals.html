@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мои цели</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-
-    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/blocks/goals.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="/index.html">
                     <img src="/images/Логотип.svg" alt="Логотип" width="77" height="83">
@@ -31,10 +33,10 @@
                         </li>
                     </ul>
                 </div>
-                <div class="d-flex">
-                    <img src="/images/account.svg" alt="">
+                <div class="user-section">
+                    <img src="/images/account.svg" alt="Аватар" width="32" height="32">
                     <span>Мария</span>
-                    <a href="/index.html" class="btn ">Выйти</a>
+                    <a href="/index.html" class="btn btn-outline-custom btn-sm">Выйти</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -42,109 +44,60 @@
             </div>
         </nav>
     </header>
+
     <main>
-        <section class="py-3">
+        <section class="py-4">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
-                        <div class="bg-white p-4 rounded shadow-sm mb-4">
+                        <!-- Блок пользователя и навигации -->
+                        <div class="main-card p-4 mb-4">
                             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
                                 <div class="d-flex align-items-center mb-3 mb-md-0">
-                                    <img src="/images/account.svg" alt="Аватар" width="40" height="40">
+                                    <img src="/images/account.svg" alt="Аватар" width="48" height="48">
                                     <div class="ms-3">
                                         <h3 class="h5 fw-bold mb-0">Мария</h3>
                                     </div>
                                 </div>
-                                <div class="d-flex gap-4">
-                                    <a href="/private-office.html"
-                                        class="text-decoration-none text-dark small fw-bold ">Личный кабинет</a>
-                                    <a href="/goals.html" class="text-decoration-none text-dark small fw-bold">Мои
-                                        цели</a>
-                                    <a href="/habits.html" class="text-decoration-none text-dark small fw-bold">Мои
-                                        привычки</a>
-                                    <a href="/knowledgebase.html"
-                                        class="text-decoration-none text-dark small fw-bold">База знаний</a>
-                                </div>
+                                <nav class="user-nav">
+                                    <a href="/private-office.html">Личный кабинет</a>
+                                    <a href="/goals.html" style="color: var(--lavender);">Мои цели</a>
+                                    <a href="/habits.html">Мои привычки</a>
+                                    <a href="/knowledgebase.html">База знаний</a>
+                                </nav>
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <div class="col-md-8">
+
+                        <!-- Поиск и кнопка -->
+                        <div class="row mb-4">
+                            <div class="col-md-8 mb-3">
                                 <div class="input-group">
-                                    <span class="input-group-text bg-light border-end-0">
+                                    <span class="input-group-text bg-white">
                                         <i class="fas fa-search text-muted"></i>
                                     </span>
-                                    <input type="text" class="form-control border-start-0" placeholder="Поиск">
+                                    <input type="text" class="form-control search-input" placeholder="Поиск">
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <button class="btn btn-primary w-100 py-2">
+                            <div class="col-md-4 mb-3">
+                                <button class="btn btn-primary-custom w-100 py-2">
                                     <i class="fas fa-plus me-2"></i>Новая цель
                                 </button>
                             </div>
                         </div>
-                        <div class="row mb-4">
-                            <div class="col-md-3 mb-2">
-                                <div class="dropdown">
-                                    <button class="btn btn-outline-secondary w-100 dropdown-toggle" type="button"
-                                        data-bs-toggle="dropdown">
-                                        Статус цели: Все
-                                    </button>
-                                    <ul class="dropdown-menu w-100">
-                                        <li><a class="dropdown-item" href="#">Все</a></li>
-                                        <li><a class="dropdown-item" href="#">Активные</a></li>
-                                        <li><a class="dropdown-item" href="#">Выполненные</a></li>
-                                        <li><a class="dropdown-item" href="#">Архивные</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-2">
-                                <div class="dropdown">
-                                    <button class="btn btn-outline-secondary w-100 dropdown-toggle" type="button"
-                                        data-bs-toggle="dropdown">
-                                        Приоритет: Все
-                                    </button>
-                                    <ul class="dropdown-menu w-100">
-                                        <li><a class="dropdown-item" href="#">Все</a></li>
-                                        <li><a class="dropdown-item" href="#">Высокий</a></li>
-                                        <li><a class="dropdown-item" href="#">Средний</a></li>
-                                        <li><a class="dropdown-item" href="#">Низкий</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-2">
-                                <div class="dropdown">
-                                    <button class="btn btn-outline-secondary w-100 dropdown-toggle" type="button"
-                                        data-bs-toggle="dropdown">
-                                        Сортировать по: Дате
-                                    </button>
-                                    <ul class="dropdown-menu w-100">
-                                        <li><a class="dropdown-item" href="#">По дате создания</a></li>
-                                        <li><a class="dropdown-item" href="#">По приоритету</a></li>
-                                        <li><a class="dropdown-item" href="#">По сроку</a></li>
-                                        <li><a class="dropdown-item" href="#">По названию</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-2">
-                                <button class="btn btn-secondary w-100 py-2">
-                                    <i class="fas fa-sync-alt me-2"></i>Сбросить
-                                </button>
-                            </div>
-                        </div>
-                        <div class="text-center py-5">
+                        <!-- Пустое состояние -->
+                        <div class="text-center py-5 empty-state">
                             <div class="mb-4">
-                                <img src="images/darts.svg" alt="">
-                                <i class="fas fa-bullseye fa-4x text-muted mb-3"></i>
+                                <img src="/images/darts.svg" alt="Нет целей">
                             </div>
-                            <h5 class="text-muted fw-normal">У вас пока нет доступных целей. Самое время начать!</h5>
+                            <h5 class="fw-normal text">У вас пока нет доступных целей. Самое время начать!</h5>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
-    <footer class="bg-light py-5">
+
+    <footer class="py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
@@ -153,6 +106,7 @@
             </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

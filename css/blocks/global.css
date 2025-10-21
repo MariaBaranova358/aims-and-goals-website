@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+body {
+    color: #29165B;
+}
+
+body.form {
+    background-color: #E3DAFF;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: #29165B;
+    color: white;
+}
+
+.container {
+    max-width: 1096px;
+    margin: 0 auto !important;
+    padding: 0;
+}

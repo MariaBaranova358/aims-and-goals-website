@@ -1,0 +1,37 @@
+.methods-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 26px 20px;
+    justify-content: center;
+}
+
+.methods-cards__card {
+    background-color: #8B5FBF;
+    padding: 10px;
+    width: 348px;
+    border-radius: 10px;
+    height: 450px;
+}
+
+.methods-cards__card--light {
+    background-color: #B694D9;
+}
+
+.methods-cards__card--dark {
+    background-color: #29165B;
+}
+
+.methods-cards__title {
+    font-size: 32px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+
+}
+
+.methods-cards__item {
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+}

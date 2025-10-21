@@ -1,0 +1,143 @@
+:root {
+    /* Цвета для формы регистрации */
+    --form-bg: white;
+    --form-shadow: rgba(0, 0, 0, 0.2);
+    --form-border-radius: 16px;
+    
+    /* Цвета текста */
+    --text-primary: #1E0A3A;
+    --text-secondary: #666;
+    --text-placeholder: #999;
+    
+    /* Цвета элементов формы */
+    --input-border: #E3DAFF;
+    --input-focus-border: #8B5FBF;
+    --input-focus-shadow: rgba(139, 95, 191, 0.1);
+    
+    /* Основные цвета */
+    --primary-color: #8B5FBF;
+    --primary-hover: #7A4FA8;
+    --checkbox-accent: #8B5FBF;
+    
+    /* Размеры */
+    --form-max-width: 650px;
+    --form-padding: 48px 40px;
+    --input-padding: 12px 16px;
+    --button-padding: 14px;
+}
+
+.register-container {
+    background: var(--form-bg);
+    border-radius: var(--form-border-radius);
+    box-shadow: 0 8px 32px var(--form-shadow);
+    padding: var(--form-padding);
+    width: 100%;
+    max-width: var(--form-max-width);
+}
+
+.register-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: var(--input-padding);
+    border: 2px solid var(--input-border);
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--text-primary);
+    background: var(--form-bg);
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 0 3px var(--input-focus-shadow);
+}
+
+.form-input::placeholder {
+    color: var(--text-placeholder);
+}
+
+.password-input {
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.password-input::placeholder {
+    letter-spacing: normal;
+    font-weight: normal;
+    color: var(--text-placeholder);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: var(--checkbox-accent);
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.register-button {
+    width: 100%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: var(--button-padding);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.register-button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 24px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.login-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

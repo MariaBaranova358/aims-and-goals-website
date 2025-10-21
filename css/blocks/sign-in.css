@@ -1,0 +1,103 @@
+:root {
+    --deep-amethyst: #1E0A3A;
+    --moderate-purple: #2D1B69;
+    --lavender: #8B5FBF;
+    --snow-lavender: #E3DAFF;
+    --white: #FFFFFF;
+    --light-text: #666;
+    --lavender-hover: #7A4FA8;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --focus-shadow: rgba(139, 95, 191, 0.1);
+}
+
+.login-container {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px var(--shadow-color);
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 650px;
+}
+
+.login-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--deep-amethyst);
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--deep-amethyst);
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--snow-lavender);
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--deep-amethyst);
+    background: var(--white);
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--lavender);
+    box-shadow: 0 0 0 3px var(--focus-shadow);
+}
+
+.password-input {
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.password-input::placeholder {
+    letter-spacing: normal;
+    font-weight: normal;
+}
+
+.login-button {
+    width: 100%;
+    background: var(--lavender);
+    color: var(--white);
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.login-button:hover {
+    background: var(--lavender-hover);
+    transform: translateY(-1px);
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 24px;
+    color: var(--light-text);
+    font-size: 14px;
+}
+
+.register-link a {
+    color: var(--lavender);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

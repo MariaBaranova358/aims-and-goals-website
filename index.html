@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главния страница</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 
-    <link href="styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -46,115 +49,128 @@
             <div class="container">
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-8">
-                        <h1 class="display-4 fw-bold mb-3">Заголовок</h1>
-                        <p class="lead mb-4">Подзаголовок</p>
-                        <a href="#" class="btn btn-primary btn-lg">Кнопка</a>
+                        <h1 class="display-4 fw-bold mb-3">Преврати цели в реальность</h1>
+                        <p class="lead mb-4">Сила маленьких шагов каждый день ведёт к большим переменам</p>
+                        <a href="#" class="btn btn-primary btn-lg">К планированию</a>
                     </div>
                 </div>
             </div>
         </div>
-        <section class="py-5">
+        <section class="advantages_block">
             <div class="container">
-                <div class="row justify-content-center text-center mb-5">
+                <div class="row justify-content-center text-center">
                     <div class="col-lg-10">
-                        <h2 class="display-5 fw-bold mb-3">Блок преимуществ</h2>
+                        <h2 class="advantages_block__title display-5 fw-bold mb-3">Блок преимуществ</h2>
                     </div>
                 </div>
 
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm text-center p-4">
+                <div class="advantages-block__inner">
+                    <div class="">
+                        <div class=" advantages-block__card  border-0 shadow-sm text-center">
                             <div class="card-body">
-                                <h5 class="card-title fw-bold">Преимущество 1</h5>
-                                <p class="card-text text-muted">Краткое описание преимущества в несколько строк текста
+                                <img src="images/advantage-icon-1.svg" alt="Иконка преимущества 1">
+                                <h5 class="card-title fw-bold">Минимум действий</h5>
+                                <p class="advantages-block__card-text text-muted">Интуитивный интерфейс, где каждая
+                                    привычка добавляется и
+                                    отмечается за пару секунд.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <div class="">
+                        <div class="advantages-block__card  border-0 shadow-sm text-center">
                             <div class="card-body">
-                                <h5 class="card-title fw-bold">Преимущество 2</h5>
-                                <p class="card-text text-muted">Краткое описание преимущества в несколько строк текста
+                                <img src="images/advantage-icon-2.svg" alt="Иконка преимущества 2">
+                                <h5 class="card-title fw-bold">Видимый прогресс</h5>
+                                <p class="advantages-block__card-text text-muted">Яркие графики и цепочки успеха
+                                    мотивируют продолжать.
+                                    Ваш рост — как на ладони.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <div class="">
+                        <div class="advantages-block__card  border-0 shadow-sm text-center">
                             <div class="card-body">
-                                <h5 class="card-title fw-bold">Преимущество 3</h5>
-                                <p class="card-text text-muted">Краткое описание преимущества в несколько строк текста
+                                <img src="images/advantage-icon-3.svg" alt="Иконка преимущества 3">
+                                <h5 class="card-title fw-bold">Умная аналитика</h5>
+                                <p class="advantages-block__card-text text-muted">Система покажет, в какое время вы
+                                    наиболее продуктивны,
+                                    и поможет подстроить ритм под себя.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    
+
+
+                </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="section-title">
+                <h2>Как работает сайт</h2>
+            </div>
+
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Постановка
+                        цели</h3>
+                    <p class="step-description">
+                        Добавьте первую привычку — быстро и без сложных настроек.
+                        Просто выберите, что важно для вас.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Отслеживание прогресса</h3>
+                    <p class="step-description">
+                        Ставьте галочку в календаре за каждое выполненное действие.
+                        Стройте свою цепочку успеха.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Анализ результата</h3>
+                    <p class="step-description">
+                        Наглядные графики покажут, как ваши усилия превращаются
+                        в реальные достижения неделя за неделей.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Закрепление успеха</h3>
+                    <p class="step-description">
+                        Регулярные напоминания и система мотивации помогут привычке
+                        стать естественной частью твоего дня.
+                    </p>
                 </div>
             </div>
         </section>
-
-        <section class="py-5">
-            <div class="container">
-                <div class="row justify-content-center text-center mb-5">
-                    <div class="col-lg-10">
-                        <h2 class="display-5 fw-bold mb-3">Как работает сайт</h2>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <div class="card card-steps border-0 shadow-sm">
-                            <div class="card-body p-5">
-                                <div class="row g-4">
-                                    <div class="col-md-6 col-lg-3 text-center">
-                                        <h5 class="fw-bold mb-2">1 шаг</h5>
-                                        <p class="text-muted mb-0">Описание первого шага работы сайта</p>
-                                    </div>
-
-                                    <div class="col-md-6 col-lg-3 text-center">
-                                        <h5 class="fw-bold mb-2">2 шаг</h5>
-                                        <p class="text-muted mb-0">Описание второго шага работы сайта</p>
-                                    </div>
-
-                                    <div class="col-md-6 col-lg-3 text-center">
-                                        <h5 class="fw-bold mb-2">3 шаг</h5>
-                                        <p class="text-muted mb-0">Описание третьего шага работы сайта</p>
-                                    </div>
-
-                                    <div class="col-md-6 col-lg-3 text-center">
-                                        <h5 class="fw-bold mb-2">4 шаг</h5>
-                                        <p class="text-muted mb-0">Описание четвертого шага работы сайта</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <section class="py-5" style="background: linear-gradient(135deg, #8B5FBF 0%, #554584 100%);">
             <div class="container">
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-8">
                         <h2 class="display-5 fw-bold mb-4 text-white">Попробуйте прямо сейчас!</h2>
-                        <p class="lead mb-4 text-light">Весь функционал доступен сразу после регистрации без каких-либо
+                        <p class="lead mb-4 text-light">Весь функционал доступен сразу после регистрации без
+                            каких-либо
                             платежей</p>
                         <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-                            <a href="/registration.html" class="btn btn--outline btn-lg px-5 fw-bold">Начать</a>
-                            <a href="/knowledgebase.html" class="btn  btn-lg px-5">Узнать больше</a>
+                            <a href="/registration.html" class="btn btn--outline btn-lg px-5 fw-bold">Создать
+                                аккаунт</a>
                         </div>
-                        <p class="small mt-3 text-light opacity-75">Полный доступ • Бессрочно бесплатно • Просто начните
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="bg-light py-5">
+    <footer class=" py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">

@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>База знаний</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 
-    <link href="styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="/index.html">
                     <img src="/images/Логотип.svg" alt="Логотип" width="77" height="83">
@@ -23,7 +28,7 @@
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link " href="/index.html">Главная</a>
+                            <a class="nav-link" href="/index.html">Главная</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="/knowledgebase.html">База знаний</a>
@@ -31,7 +36,7 @@
                     </ul>
                 </div>
                 <div class="d-flex">
-                    <a href="/sign-in-form.html" class="btn btn--outline me-2">Войти</a>
+                    <a href="/sign-in-form.html" class="btn btn--outline  me-2">Войти</a>
                     <a href="/registration.html" class="btn ">Начать работу</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -41,31 +46,31 @@
         </nav>
     </header>
     <main>
-        <ul class="nav nav-pills justify-content-around  custom-nav">
-            <li class="nav-item">
-                <a class="nav-link active" href="#target">Целеполагание</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#habits">Привычки</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#motivation">Мотивация</a>
-            </li>
-        </ul>
+        <div class="container">
+            <ul class="nav nav-pills justify-content-between  custom-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#target">Целеполагание</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#habits">Привычки</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#motivation">Мотивация</a>
+                </li>
+            </ul>
+        </div>
         <section id="target" class="position-relative overflow-hidden">
             <img src="/images/aims.jpg" alt="Фон" class="w-100" style="height: 70vh; object-fit: cover;">
 
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
                 <div class="container">
                     <div class="row justify-content-center text-center">
-                        <div class="col-lg-8">
-                            <h1 class="display-4 fw-bold text-white mb-3">Целеполагание</h1>
-                        </div>
+                        <h1 class="knowledge__title fw-bold text-white">Целеполагание</h1>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="py-5">
+        <section class="py-3">
             <div class="container">
                 <div class="row align-items-center">
                     <h2 class="display-4 fw-bold text-center mb-3">Что такое целеполагание</h2>
@@ -79,12 +84,13 @@
                         ценности
                         компании и будет реализовывать общую миссию.</p>
                     <div class="text-center">
-                        <img src="images/dylan-gillis-kdeqa3atnby-unsplash-3.jpg.webp" alt="Люди планируют что-то">
+                        <img class="img" src="images/dylan-gillis-kdeqa3atnby-unsplash-3.jpg.webp"
+                            alt="Люди планируют что-то">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="py-5">
+        <section class="py-3">
             <div class="container">
                 <div class="row align-items-center">
                     <h2 class="display-4 fw-bold text-center mb-3">Зачем нужно целеполагание</h2>
@@ -109,146 +115,82 @@
                 </div>
             </div>
         </section>
-        <section class="py-5">
+        <section class="py-3 ">
             <div class="container">
-                <div class="row justify-content-center text-center mb-5">
-                    <div class="col-lg-8">
-                        <h2 class="display-4 fw-bold  mb-3">Эффективные методы целеполагания</h2>
+                <h2 class="display-4 fw-bold text-center mb-3">Эффективные методы целеполагания</h2>
+                <div class="methods-cards">
+                    <div class="methods-cards__card">
+                        <h4 class="methods-cards__title">Метод SMART</h4>
+                        <ul class="methods-cards__list">
+                            <li class="methods-cards__item"><b>Конкретность (Specific):</b> Четко сформулируй, чего
+                                именно ты хочешь достичь.</li>
+                            <li class="methods-cards__item"><b>Измеримость (Measurable):</b> Определи, как ты поймешь,
+                                что цель достигнута.</li>
+                            <li class="methods-cards__item"><b>Достижимость (Achievable):</b> Убедись, что цель
+                                реалистична для тебя.</li>
+                            <li class="methods-cards__item"><b>Релевантность (Relevant):</b> Проверь, насколько цель
+                                важна для твоей жизни.</li>
+                            <li class="methods-cards__item"><b>Ограниченность по времени (Time-bound):</b> Установи
+                                четкий дедлайн.</li>
+                        </ul>
+                    </div>
+                    <div class="methods-cards__card methods-cards__card--light">
+                        <h4 class="methods-cards__title">Баланс жизни</h4>
+                        <ul class="methods-cards__list">
+                            <li class="methods-cards__item"><b>Оцени сферы жизни:</b> Проанализируй 8-10 ключевых сфер
+                                (здоровье, карьера, отношения и т.д.).</li>
+                            <li class="methods-cards__item"><b>Определи дисбаланс:</b> Найди области, которые требуют
+                                большего внимания.</li>
+                            <li class="methods-cards__item"><b>Расставь приоритеты:</b> Выбери 1-2 сферы для фокуса в
+                                текущем периоде.</li>
+                            <li class="methods-cards__item"><b>Релевантность (Relevant):</b> Проверь, насколько цель
+                                важна для твоей жизни.</li>
+                            <li class="methods-cards__item"><b>Поставь сбалансированные цели:</b> Сформулируй цели,
+                                которые улучшат общую гармонию.</li>
+                        </ul>
+                    </div>
+                    <div class="methods-cards__card methods-cards__card--dark">
+                        <h4 class="methods-cards__title">Mind Maps</h4>
+                        <ul class="methods-cards__list">
+                            <li class="methods-cards__item"><b>Определи центральную идею::</b> Начни с главной цели в
+                                центре карты.</li>
+                            <li class="methods-cards__item"><b>Создай основные ветви:</b> Выдели ключевые направления
+                                или проекты для ее достижения.</li>
+                            <li class="methods-cards__item"><b>Детализируй шаги:</b> Разбей каждое направление на
+                                конкретные, мелкие задачи.</li>
+                            <li class="methods-cards__item"><b>Визуализируй связи:</b> Увидь, как небольшие шаги ведут к
+                                глобальному результату.</li>
+                        </ul>
+                    </div>
+                    <div class="methods-cards__card methods-cards__card--dark">
+                        <h4 class="methods-cards__title">Обратное планирование</h4>
+                        <ul class="methods-cards__list">
+                            <li class="methods-cards__item"><b>Представь идеальный результат:</b> Детально опиши, как
+                                выглядит успех.</li>
+                            <li class="methods-cards__item"><b>Определи финальный шаг:</b> Что нужно сделать прямо перед
+                                достижением цели?</li>
+                            <li class="methods-cards__item"><b>Составь цепочку шагов:</b> Двигайся в обратном порядке до
+                                самого начала.</li>
+                            <li class="methods-cards__item"><b>Запланируй первый шаг:</b> Определи самое простое
+                                действие, которое можно сделать сегодня.</li>
+                        </ul>
+                    </div>
+                    <div class="methods-cards__card">
+                        <h4 class="methods-cards__title">Правило 5 Почему</h4>
+                        <ul class="methods-cards__list">
+                            <li class="methods-cards__item"><b>Сформулируй цель:</b> Запиши свое желаемое достижение.
+                            </li>
+                            <li class="methods-cards__item"><b>Спроси «Почему?»: </b> Задай этот вопрос минимум 5 раз,
+                                углубляясь в причину.</li>
+                            <li class="methods-cards__item"><b>Найди корневую мотивацию:</b> Определи, что на самом деле
+                                стоит за твоим желанием.</li>
+                            <li class="methods-cards__item"><b>Переформулируй цель:</b> Убедись, что она действительно
+                                отражает твои глубинные потребности.</li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="d-flex flex-wrap justify-content-center gap-4">
-                    <div class="card border-0 shadow-sm" style="width: 348px;">
-                        <div class="card-body text-center p-4">
-                            <div class="method-icon mb-3">
-                                <i class="fas fa-bullseye fa-3x text-primary"></i>
-                            </div>
-                            <h4 class="card-title fw-bold">SMART</h4>
-                            <p class="card-text text-muted">
-                                Конкретные, измеримые, достижимые, релевантные, ограниченные по времени цели
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="card border-0 shadow-sm" style="width: 348px;">
-                        <div class="card-body text-center p-4">
-                            <div class="method-icon mb-3">
-                                <i class="fas fa-tree fa-3x text-primary"></i>
-                            </div>
-                            <h4 class="card-title fw-bold">Дерево целей</h4>
-                            <p class="card-text text-muted">
-                                Иерархическая структура от главной цели к подцелям и конкретным задачам
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card border-0 shadow-sm" style="width: 348px;">
-                        <div class="card-body text-center p-4">
-                            <div class="method-icon mb-3">
-                                <i class="fas fa-chart-line fa-3x text-primary"></i>
-                            </div>
-                            <h4 class="card-title fw-bold">OKR</h4>
-                            <p class="card-text text-muted">
-                                Objectives and Key Results - цели и ключевые результаты для компаний и команд
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="card border-0 shadow-sm" style="width: 348px;">
-                        <div class="card-body text-center p-4">
-                            <div class="method-icon mb-3">
-                                <i class="fas fa-chess-board fa-3x text-primary"></i>
-                            </div>
-                            <h4 class="card-title fw-bold">Матрица Эйзенхауэра</h4>
-                            <p class="card-text text-muted">
-                                Приоритизация задач по срочности и важности для эффективного планирования
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="card border-0 shadow-sm" style="width: 348px;">
-                        <div class="card-body text-center p-4">
-                            <div class="method-icon mb-3">
-                                <i class="fas fa-puzzle-piece fa-3x text-primary"></i>
-                            </div>
-                            <h4 class="card-title fw-bold">Метод ABCDE</h4>
-                            <p class="card-text text-muted">
-                                Ранжирование задач по важности от A (самые важные) до E (исключаемые)
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
-        <section id="habits" class="position-relative overflow-hidden">
-            <img src="/images/habits.jpg" alt="Фон" class="w-100" style="height: 70vh; object-fit: cover;">
-
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
-                <div class="container">
-                    <div class="row justify-content-center text-center">
-                        <div class="col-lg-8">
-                            <h1 class="display-4 fw-bold text-white mb-3">Формирование привычек</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <h2 class="display-4 fw-bold text-center mb-3">Что такое привычка</h2>
-                    <p class="fs-5">Привычка — это автоматизированное действие, поведение или образ мышления, которые
-                        регулярно повторяются в определенных ситуациях и со временем начинают выполняться почти без
-                        сознательных усилий. Формируясь через многократное повторение, привычки закрепляются в нейронных
-                        путях мозга, создавая устойчивые шаблоны поведения. Они могут быть как полезными (например,
-                        утренняя зарядка, планирование дня, чтение), так и вредными (прокрастинация, курение, нездоровое
-                        питание). Привычки играют ключевую роль в нашей повседневной жизни, поскольку экономят
-                        ментальную энергию, избавляя от необходимости каждый раз заново принимать решения в знакомых
-                        ситуациях.</p>
-                </div>
-            </div>
-        </section>
-        <section class="py-5 ">
-            <div class="container">
-                <div class="row justify-content-center text-center mb-5">
-                    <div class="col-lg-10">
-                        <h2 class="display-4 fw-bold text-dark mb-3">Классификация привычек</h2>
-                    </div>
-                </div>
-
-                <div class="d-flex flex-wrap justify-content-center gap-4">
-                    <div class="card border-0 text-white"
-                        style="width: 348px; background: linear-gradient(135deg, #28a745, #20c997);">
-                        <div class="card-body text-center p-4">
-                            <h4 class="card-title fw-bold mb-3">Позитивные</h4>
-                            <p class="card-text mb-0">
-                                Спорт, чтение, планирование, здоровое питание, обучение, медитация
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="card border-0 text-white"
-                        style="width: 348px; background: linear-gradient(135deg, #dc3545, #fd7e14);">
-                        <div class="card-body text-center p-4">
-                            <h4 class="card-title fw-bold mb-3">Негативные</h4>
-                            <p class="card-text mb-0">
-                                Курение, прокрастинация, переедание, поздний сон, негативное мышление
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="card border-0 text-white"
-                        style="width: 348px; background: linear-gradient(135deg, #6c757d, #adb5bd);">
-                        <div class="card-body text-center p-4">
-                            <h4 class="card-title fw-bold mb-3">Нейтральные</h4>
-                            <p class="card-text mb-0">
-                                Порядок действий, предпочтения в еде, маршруты, ритуалы, распорядок
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-5">
+        <section class="py-3">
             <div class="container">
                 <div class="row align-items-center">
                     <h2 class="display-4 fw-bold text-center mb-3">Как формируются привычки</h2>
@@ -276,22 +218,19 @@
             </div>
         </section>
         <section id="motivation" class="position-relative overflow-hidden">
-            <img src="/images/motivatiov.jpg" alt="Фон" class="w-100" style="height: 70vh; object-fit: cover;">
+            <img src="/images/motivatov.png" alt="Фон" class="w-100" style="height: 70vh; object-fit: cover;">
 
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
                 <div class="container">
                     <div class="row justify-content-center text-center">
-                        <div class="col-lg-8">
-                            <h1 class="display-4 fw-bold text-white mb-3">Мотивация и дисциплина</h1>
-                        </div>
+                        <h1 class="knowledge__title fw-bold text-white">Мотивация и дисциплина</h1>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="py-5">
+        <section class="py-3">
             <div class="container">
                 <div class="row align-items-center">
-                    <h2 class="display-4 fw-bold text-center mb-3">Как формируются привычки</h2>
                     <p class="fs-5">Мотивация и дисциплина — это два взаимодополняющих механизма саморегуляции, которые
                         обеспечивают движение к целям, но работают по разным принципам. Мотивация представляет собой
                         внутренний импульс, эмоциональный подъем и желание действовать, вызванное внешними стимулами или
@@ -333,7 +272,7 @@
             </div>
         </section>
     </main>
-    <footer class="bg-light py-5">
+    <footer class=" py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
