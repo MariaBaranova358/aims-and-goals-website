@@ -10,6 +10,38 @@
     --focus-shadow: rgba(139, 95, 191, 0.1);
 }
 
+/* Кнопки входа */
+.login-button {
+    background: var(--lavender);
+    border: 2px solid var(--lavender);
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.login-button:hover {
+    background: var(--moderate-purple);
+    border-color: var(--moderate-purple);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 95, 191, 0.4);
+}
+
+/* Кнопки регистрации */
+.register-button {
+    background: var(--lavender);
+    border: 2px solid var(--lavender);
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.register-button:hover {
+    background: var(--moderate-purple);
+    border-color: var(--moderate-purple);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 95, 191, 0.4);
+}
+
 .login-container {
     background: var(--white);
     border-radius: 16px;
@@ -100,4 +132,66 @@
 
 .register-link a:hover {
     text-decoration: underline;
+}
+
+/* Анимация появления формы */
+.register-container,
+.login-container {
+    animation: formSlideIn 0.8s ease-out;
+}
+
+@keyframes formSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Анимация полей формы */
+.form-group {
+    animation: fieldAppear 0.6s ease-out backwards;
+}
+
+.form-group:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.form-group:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.form-group:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.form-group:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fieldAppear {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Анимация фокуса на полях ввода */
+.form-input {
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 95, 191, 0.2);
+    border-color: var(--lavender);
 }

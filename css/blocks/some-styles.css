@@ -120,6 +120,30 @@
     color: var(--deep-purple);
 }
 
+/* Основные кнопки - фиолетовые */
+.btn {
+    background-color: var(--lavender);
+    border: 2px solid var(--lavender);
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background-color: var(--moderate-purple);
+    border-color: var(--moderate-purple);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 95, 191, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(139, 95, 191, 0.3);
+}
+
 .d-flex {
     gap: 20px;
     align-items: center;
@@ -141,4 +165,47 @@
     background-color: var(--gray-light);
     width: 420px;
     height: 420px;
+}
+
+/* Пульсация для главной кнопки на баннере */
+.pulsing-btn {
+    animation: pulse 2s infinite ease-in-out;
+    position: relative;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(139, 95, 191, 0.7);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(139, 95, 191, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(139, 95, 191, 0);
+    }
+}
+
+/* Альтернативная более простая пульсация */
+.pulsing-btn-simple {
+    animation: pulse-simple 2s infinite;
+}
+
+@keyframes pulse-simple {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
 }

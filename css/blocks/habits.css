@@ -7,6 +7,40 @@
      --light-text: #B8A1D9;
  }
 
+ /* Кастомные основные кнопки */
+.btn-primary-custom {
+    background: var(--lavender);
+    border: 2px solid var(--lavender);
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-primary-custom:hover {
+    background: var(--moderate-purple);
+    border-color: var(--moderate-purple);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 95, 191, 0.4);
+}
+
+/* Кастомные контурные кнопки */
+.btn-outline-custom {
+    background: transparent;
+    border: 2px solid var(--lavender);
+    color: var(--lavender);
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-outline-custom:hover {
+    background: var(--lavender);
+    border-color: var(--lavender);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 95, 191, 0.3);
+}
+
  body {
      background-color: #f8f9fa;
      font-family: "Montserrat", sans-serif;
@@ -254,4 +288,52 @@
      .habit-status {
          font-size: 0.9rem;
      }
+ }
+
+
+ /* Анимация для статуса привычек */
+ .habit-status {
+     transition: all 0.3s ease;
+     display: inline-block;
+ }
+
+ .habit-status.status-completed {
+     animation: bounceIn 0.5s ease;
+ }
+
+ @keyframes bounceIn {
+     0% {
+         transform: scale(0.3);
+         opacity: 0;
+     }
+
+     50% {
+         transform: scale(1.1);
+     }
+
+     100% {
+         transform: scale(1);
+         opacity: 1;
+     }
+ }
+
+ .habit-status.status-completed:hover {
+     animation: pulse-habit 1s infinite;
+ }
+
+ @keyframes pulse-habit {
+
+     0%,
+     100% {
+         transform: scale(1);
+     }
+
+     50% {
+         transform: scale(1.2);
+     }
+ }
+
+ /* Анимация при наведении на ячейку календаря */
+ .calendar-table td:hover .habit-status {
+     transform: scale(1.3);
  }

@@ -7,6 +7,67 @@
     --light-text: #B8A1D9;
 }
 
+/* Кнопки с иконками */
+.btn i {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+    transform: translateX(3px);
+}
+
+/* Кнопки в хедере */
+.d-flex .btn {
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-weight: 600;
+}
+
+.d-flex .btn--outline {
+    background: transparent;
+    border: 2px solid var(--lavender);
+    color: var(--lavender);
+}
+
+.d-flex .btn--outline:hover {
+    background: var(--lavender);
+    color: white;
+}
+
+/* Кастомные основные кнопки */
+.btn-primary-custom {
+    background: var(--lavender);
+    border: 2px solid var(--lavender);
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-primary-custom:hover {
+    background: var(--moderate-purple);
+    border-color: var(--moderate-purple);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 95, 191, 0.4);
+}
+
+/* Кастомные контурные кнопки */
+.btn-outline-custom {
+    background: transparent;
+    border: 2px solid var(--lavender);
+    color: var(--lavender);
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-outline-custom:hover {
+    background: var(--lavender);
+    border-color: var(--lavender);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 95, 191, 0.3);
+}
+
 body {
     background-color: #f8f9fa;
     font-family: "Montserrat", sans-serif;
@@ -129,5 +190,36 @@ footer {
     .user-section {
         flex-direction: column;
         gap: 0.5rem;
+    }
+}
+
+/* Анимация для пустого состояния */
+.empty-state img {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.empty-state h5 {
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

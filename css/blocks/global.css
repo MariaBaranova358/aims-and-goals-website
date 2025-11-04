@@ -6,6 +6,28 @@
 
 }
 
+/* Убедимся, что все кнопки имеют одинаковый стиль */
+button,
+.btn,
+[type="button"],
+[type="submit"] {
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Убираем стандартные стили браузера */
+button:focus,
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139, 95, 191, 0.3);
+}
+
 body {
     color: #29165B;
 }
@@ -28,4 +50,89 @@ footer {
     max-width: 1096px;
     margin: 0 auto !important;
     padding: 0;
+}
+
+
+/* Анимация появления для основных элементов */
+.hero-banner,
+.advantages_block,
+.how-it-works,
+.methods-cards,
+.motivation-section {
+    animation: fadeInUp 1s ease-out;
+}
+
+.advantages-block__card {
+    animation: fadeInUp 0.8s ease-out backwards;
+}
+
+/* Задержки для последовательного появления */
+.advantages-block__card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.advantages-block__card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.advantages-block__card:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+/* Анимация для шагов */
+.step {
+    animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.step:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.step:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.step:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.step:nth-child(4) {
+    animation-delay: 1s;
+}
+
+/* Анимация для карточек методов */
+.methods-cards__card {
+    animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.methods-cards__card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.methods-cards__card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.methods-cards__card:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.methods-cards__card:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.methods-cards__card:nth-child(5) {
+    animation-delay: 1.1s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

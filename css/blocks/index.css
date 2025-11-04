@@ -141,3 +141,26 @@
         font-size: 2.5rem;
     }
 }
+
+/* Анимация карточек при наведении */
+.advantages-block__card,
+.methods-cards__card,
+.card {
+    transition: all 0.3s ease;
+}
+
+.advantages-block__card:hover,
+.methods-cards__card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(139, 95, 191, 0.15);
+}
+
+/* Анимация иконок в карточках */
+.advantages-block__card img {
+    transition: all 0.4s ease;
+}
+
+.advantages-block__card:hover img {
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(1.1);
+}

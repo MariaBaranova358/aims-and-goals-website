@@ -2,3 +2,39 @@
     margin: 0 0 40px;
     border-bottom: 1px solid #29165B;
 }
+
+/* Анимация логотипа */
+.navbar-brand img {
+    transition: all 0.4s ease;
+}
+
+.navbar-brand:hover img {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Анимация пунктов меню */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--lavender);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--lavender) !important;
+    transform: translateY(-2px);
+}

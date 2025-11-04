@@ -51,8 +51,8 @@
  }
 
  a {
-    color:  var(--light-text);
-    text-decoration: none;
+     color: var(--light-text);
+     text-decoration: none;
  }
 
  .nav-item.active {
@@ -224,5 +224,34 @@
 
      .content-grid {
          grid-template-columns: 1fr;
+     }
+ }
+
+
+ /* Анимированный прогресс-бар */
+ .progress-fill {
+     animation: progressFill 1.5s ease-in-out;
+     transform-origin: left;
+ }
+
+ @keyframes progressFill {
+     from {
+         transform: scaleX(0);
+     }
+
+     to {
+         transform: scaleX(1);
+     }
+ }
+
+ /* Альтернативная анимация через ширину */
+ .progress-fill-width {
+     animation: progressWidth 1.5s ease-in-out forwards;
+     width: 0 !important;
+ }
+
+ @keyframes progressWidth {
+     to {
+         width: var(--target-width, 65%) !important;
      }
  }
