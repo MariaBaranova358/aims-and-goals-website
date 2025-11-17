@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Личный кабинет</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -12,85 +13,102 @@
     <link rel="stylesheet" href="css/blocks/private-office.css">
 </head>
 
-<body>
+<body class="bg-[#C4B0FF] text-[#1E0A3A] min-h-screen grid grid-cols-1 md:grid-cols-[250px_1fr]">
     <!-- Сайдбар -->
-    <nav class="sidebar">
-        <div class="logo"><img src="images/Логотип (1).svg" alt="Логотип"></div>
-        <div class="nav-item active">Личный кабинет</div>
-        <div class="nav-item"><a href="/goals.html">Мои цели</a></div>
-        <div class="nav-item"><a href="/habits.html">Мои привычки</a></div>
-        <div class="nav-item"><a href="/knowledgebase.html">База знаний</a></div>
+    <nav class="bg-[#1E0A3A] text-white p-8 md:p-4 fixed md:static w-full md:w-auto h-auto md:h-screen z-10 md:z-auto">
+        <div class="flex justify-between items-center md:block">
+            <div class="logo text-[#B8A1D9] text-xl font-bold mb-8 hidden md:block">
+                <img src="images/Логотип (1).svg" alt="Логотип">
+            </div>
+            <div class="flex md:flex-col space-x-4 md:space-x-0 overflow-x-auto md:overflow-visible">
+                <div class="nav-item bg-[#8B5FBF] text-white px-4 py-2 rounded-lg cursor-pointer whitespace-nowrap">
+                    Личный кабинет</div>
+                <div
+                    class="nav-item px-4 py-2 rounded-lg cursor-pointer hover:bg-[#2D1B69] transition-all whitespace-nowrap">
+                    <a href="/goals.html" class="text-[#B8A1D9] no-underline">Мои цели</a>
+                </div>
+                <div
+                    class="nav-item px-4 py-2 rounded-lg cursor-pointer hover:bg-[#2D1B69] transition-all whitespace-nowrap">
+                    <a href="/habits.html" class="text-[#B8A1D9] no-underline">Мои привычки</a>
+                </div>
+                <div
+                    class="nav-item px-4 py-2 rounded-lg cursor-pointer hover:bg-[#2D1B69] transition-all whitespace-nowrap">
+                    <a href="/knowledgebase.html" class="text-[#B8A1D9] no-underline">База знаний</a>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <!-- Основной контент -->
-    <main class="main-content">
+    <main class="md:col-start-2 p-8 mt-16 md:mt-0">
         <!-- Шапка -->
-        <header class="header">
-            <h1 class="welcome">Здравствуйте, Мария! 🍀 Готовы к новым свершениям?</h1>
+        <header class="mb-8">
+            <h1 class="welcome text-2xl font-bold text-[#1E0A3A]">Здравствуйте, Мария! 🍀 Готовы к новым свершениям?
+            </h1>
         </header>
 
         <!-- Сетка контента -->
-        <div class="content-grid">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Мои привычки -->
-            <section class="card habits-section">
-                <h2 class="card-title">Мои привычки</h2>
-                <div class="habit-item">
+            <section class="bg-white rounded-xl p-6 shadow-lg border border-[#E3DAFF] md:col-span-1">
+                <h2 class="text-[#2D1B69] text-xl font-bold mb-4">Мои привычки</h2>
+                <div class="habit-item flex justify-between items-center py-4 border-b border-[#E3DAFF]">
                     <div>
-                        <div class="habit-name">Утренняя зарядка</div>
-                        <div class="habit-streak">7 дней подряд</div>
+                        <div class="habit-name font-medium text-[#1E0A3A]">Утренняя зарядка</div>
+                        <div class="habit-streak text-[#8B5FBF] text-sm">7 дней подряд</div>
                     </div>
                 </div>
-                <div class="habit-item">
+                <div class="habit-item flex justify-between items-center py-4 border-b border-[#E3DAFF]">
                     <div>
-                        <div class="habit-name">Утренняя зарядка</div>
-                        <div class="habit-streak">7 дней подряд</div>
+                        <div class="habit-name font-medium text-[#1E0A3A]">Чтение перед сном</div>
+                        <div class="habit-streak text-[#8B5FBF] text-sm">5 дней подряд</div>
                     </div>
                 </div>
             </section>
 
             <!-- Прогресс -->
-            <section class="card progress-section">
-                <h2 class="card-title">Мои привычки</h2>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 65%;"></div>
+            <section class="bg-white rounded-xl p-6 shadow-lg border border-[#E3DAFF] md:col-span-1">
+                <h2 class="text-[#2D1B69] text-xl font-bold mb-4">Прогресс привычек</h2>
+                <div class="progress-bar w-full h-2 bg-[#E3DAFF] rounded-full mt-2 overflow-hidden">
+                    <div class="progress-fill h-full bg-[#8B5FBF] rounded-full" style="width: 65%;"></div>
                 </div>
-                <p class="progress-text">Выполнено 65% от плана на неделю</p>
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-value">12</div>
-                        <div class="stat-label">Выполнено</div>
+                <p class="text-[#1E0A3A] my-4">Выполнено 65% от плана на неделю</p>
+                <div class="stats grid grid-cols-2 gap-4">
+                    <div class="stat-item text-center p-4 bg-[#E3DAFF] rounded-lg">
+                        <div class="stat-value text-2xl font-bold text-[#8B5FBF]">12</div>
+                        <div class="stat-label text-sm text-[#1E0A3A]">Выполнено</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-value">7</div>
-                        <div class="stat-label">Осталось</div>
+                    <div class="stat-item text-center p-4 bg-[#E3DAFF] rounded-lg">
+                        <div class="stat-value text-2xl font-bold text-[#8B5FBF]">7</div>
+                        <div class="stat-label text-sm text-[#1E0A3A]">Осталось</div>
                     </div>
                 </div>
             </section>
 
             <!-- Активные цели -->
-            <section class="card goals-section">
-                <h2 class="card-title">Активные цели</h2>
-                <div class="goal-item">
-                    <div class="goal-name">Прочитать 5 книг</div>
-                    <div class="goal-progress">2 из 5 завершено</div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 40%"></div>
+            <section class="bg-white rounded-xl p-6 shadow-lg border border-[#E3DAFF] md:col-span-1">
+                <h2 class="text-[#2D1B69] text-xl font-bold mb-4">Активные цели</h2>
+                <div class="goal-item mb-4 pb-4 border-b border-[#E3DAFF]">
+                    <div class="goal-name font-medium text-[#1E0A3A] mb-2">Прочитать 5 книг</div>
+                    <div class="goal-progress text-[#8B5FBF] text-sm mb-2">2 из 5 завершено</div>
+                    <div class="progress-bar w-full h-1.5 bg-[#E3DAFF] rounded-full overflow-hidden">
+                        <div class="progress-fill h-full bg-[#8B5FBF] rounded-full" style="width: 40%"></div>
                     </div>
                 </div>
-                <div class="goal-item">
-                    <div class="goal-name">Написать простое приложение на Python</div>
-                    <div class="goal-progress">7 из 12 завершено</div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 40%"></div>
+                <div class="goal-item mb-4 pb-4 border-b border-[#E3DAFF]">
+                    <div class="goal-name font-medium text-[#1E0A3A] mb-2">Написать простое приложение на Python</div>
+                    <div class="goal-progress text-[#8B5FBF] text-sm mb-2">7 из 12 завершено</div>
+                    <div class="progress-bar w-full h-1.5 bg-[#E3DAFF] rounded-full overflow-hidden">
+                        <div class="progress-fill h-full bg-[#8B5FBF] rounded-full" style="width: 58%"></div>
                     </div>
                 </div>
             </section>
 
             <!-- Мотивация -->
-            <section class="card motivation-section">
-                <h2 class="card-title">Моя мотивация</h2>
-                <p class="motivation-text">"Последовательность — ключ к результату. Каждый маленький шаг имеет
-                    значение."</p>
+            <section class="bg-white rounded-xl p-6 shadow-lg border border-[#E3DAFF] md:col-span-1">
+                <h2 class="text-[#2D1B69] text-xl font-bold mb-4">Моя мотивация</h2>
+                <p class="motivation-text italic text-[#8B5FBF] leading-relaxed font-bold">"Последовательность — ключ к
+                    результату. Каждый маленький шаг имеет значение."</p>
             </section>
         </div>
     </main>

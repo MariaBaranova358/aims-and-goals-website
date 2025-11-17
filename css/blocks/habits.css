@@ -1,339 +1,467 @@
- :root {
-     --deep-amethyst: #1E0A3A;
-     --moderate-purple: #2D1B69;
-     --lavender: #8B5FBF;
-     --snow-lavender: #E3DAFF;
-     --white: #FFFFFF;
-     --light-text: #B8A1D9;
- }
+:root {
+    --deep-amethyst: #1E0A3A;
+    --moderate-purple: #2D1B69;
+    --lavender: #8B5FBF;
+    --snow-lavender: #E3DAFF;
+    --white: #FFFFFF;
+    --light-text: #B8A1D9;
+}
 
- /* Кастомные основные кнопки */
+ul {
+    background-color: #ffffff00 !important;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+/* === Основные кнопки === */
 .btn-primary-custom {
     background: var(--lavender);
     border: 2px solid var(--lavender);
     color: white;
-    transition: all 0.3s ease;
     font-weight: 600;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .btn-primary-custom:hover {
     background: var(--moderate-purple);
     border-color: var(--moderate-purple);
-    color: white;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(139, 95, 191, 0.4);
 }
 
-/* Кастомные контурные кнопки */
 .btn-outline-custom {
     background: transparent;
     border: 2px solid var(--lavender);
     color: var(--lavender);
-    transition: all 0.3s ease;
     font-weight: 600;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
 }
 
 .btn-outline-custom:hover {
     background: var(--lavender);
-    border-color: var(--lavender);
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(139, 95, 191, 0.3);
 }
 
- body {
-     background-color: #f8f9fa;
-     font-family: "Montserrat", sans-serif;
-     overflow-x: hidden;
- }
+/* === Навбар === */
+.top-bar {
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 0;
+}
 
- .navbar {
-     background: var(--white) !important;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
- }
+.top-bar .menu a {
+    color: var(--deep-amethyst);
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
 
- .nav-link.active {
-     color: var(--lavender) !important;
-     font-weight: 600;
- }
+.top-bar .menu a:hover,
+.top-bar .menu a.active {
+    background: var(--snow-lavender);
+    color: var(--lavender);
+    font-weight: 600;
+}
 
- .nav-link {
-     color: var(--deep-amethyst) !important;
- }
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+    color: var(--deep-amethyst);
+}
 
- .user-section {
-     display: flex;
-     align-items: center;
-     gap: 1rem;
- }
+/* === Карточки === */
+.main-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
 
- .user-section span {
-     color: var(--deep-amethyst);
-     font-weight: 500;
- }
+.user-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
- .btn-outline-custom {
-     border: 1px solid var(--lavender);
-     color: var(--lavender);
- }
+.user-nav a {
+    color: var(--deep-amethyst);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
 
- .btn-outline-custom:hover {
-     background: var(--lavender);
-     color: var(--white);
- }
+.user-nav a:hover {
+    background: var(--snow-lavender);
+    color: var(--lavender);
+}
 
- .btn-primary-custom {
-     background: var(--lavender);
-     border-color: var(--lavender);
-     color: var(--white);
- }
+/* === Календарь === */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
 
- .btn-primary-custom:hover {
-     background: var(--moderate-purple);
-     border-color: var(--moderate-purple);
- }
+.calendar-title {
+    color: var(--deep-amethyst);
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+}
 
- .main-card {
-     background: var(--white);
-     border-radius: 12px;
-     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-     border: none;
- }
+.month-selector {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
- .user-nav {
-     display: flex;
-     gap: 2rem;
-     align-items: center;
- }
+.month-name {
+    font-weight: 600;
+    color: var(--moderate-purple);
+    min-width: 100px;
+    text-align: center;
+}
 
- .user-nav a {
-     color: var(--deep-amethyst);
-     text-decoration: none;
-     font-weight: 500;
-     padding: 0.5rem 1rem;
-     border-radius: 6px;
-     transition: all 0.3s ease;
- }
+.calendar-container {
+    overflow-x: auto;
+    margin: 0 -1rem;
+    padding: 0 1rem;
+}
 
- .user-nav a:hover {
-     background: var(--snow-lavender);
-     color: var(--lavender);
- }
+.calendar-table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+}
 
- .calendar-header {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     margin-bottom: 1rem;
- }
+.calendar-table th {
+    background: var(--snow-lavender);
+    color: var(--moderate-purple);
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid var(--snow-lavender);
+    min-width: 35px;
+    font-size: 0.85rem;
+}
 
- .calendar-title {
-     font-family: 'Poppins', sans-serif;
-     color: var(--deep-amethyst);
-     font-size: 1.5rem;
-     margin: 0;
- }
+.calendar-table td {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid var(--snow-lavender);
+    height: 40px;
+    vertical-align: middle;
+}
 
- .month-selector {
-     display: flex;
-     align-items: center;
-     gap: 1rem;
- }
+.habit-name {
+    text-align: left !important;
+    font-weight: 500;
+    color: var(--deep-amethyst);
+    padding-left: 0.75rem !important;
+    position: sticky;
+    left: 0;
+    background: var(--white);
+    z-index: 1;
+    min-width: 120px;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
- .month-name {
-     font-weight: 600;
-     color: var(--moderate-purple);
-     min-width: 100px;
-     text-align: center;
- }
+.habit-status {
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
 
- .calendar-container {
-     overflow-x: auto;
-     margin: 0 -1rem;
-     padding: 0 1rem;
- }
+.habit-status:hover {
+    transform: scale(1.2);
+}
 
- .calendar-table {
-     width: auto;
-     border-collapse: collapse;
-     min-width: 100%;
- }
+.status-completed {
+    color: var(--lavender);
+}
 
- .calendar-table th {
-     background: var(--snow-lavender);
-     color: var(--moderate-purple);
-     padding: 0.5rem;
-     text-align: center;
-     font-weight: 600;
-     border: 1px solid var(--snow-lavender);
-     min-width: 35px;
-     font-size: 0.85rem;
- }
+.status-pending {
+    color: var(--light-text);
+    opacity: 0.5;
+}
 
- .calendar-table td {
-     padding: 0.5rem;
-     text-align: center;
-     border: 1px solid var(--snow-lavender);
-     vertical-align: middle;
-     min-width: 35px;
-     height: 40px;
- }
+.today-cell {
+    background: var(--snow-lavender) !important;
+    position: relative;
+}
 
- .habit-name {
-     text-align: left !important;
-     font-weight: 500;
-     color: var(--deep-amethyst);
-     padding-left: 0.75rem !important;
-     position: sticky;
-     left: 0;
-     background: var(--white);
-     z-index: 1;
-     min-width: 120px;
-     max-width: 120px;
-     white-space: nowrap;
-     overflow: hidden;
-     text-overflow: ellipsis;
- }
+.today-cell::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background: var(--lavender);
+    border-radius: 50%;
+}
 
- .habit-status {
-     font-size: 1rem;
-     cursor: pointer;
-     transition: all 0.3s ease;
-     display: inline-block;
- }
+/* === Футер === */
+footer {
+    background: var(--deep-amethyst);
+    color: white;
+    padding: 3rem 0;
+    margin-top: 2rem;
+}
 
- .habit-status:hover {
-     transform: scale(1.2);
- }
+/* === Анимации === */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
 
- .status-completed {
-     color: var(--lavender);
- }
+    50% {
+        transform: scale(1.1);
+    }
 
- .status-pending {
-     color: var(--light-text);
-     opacity: 0.5;
- }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
- .today-cell {
-     background: var(--snow-lavender) !important;
-     position: relative;
- }
+@keyframes pulse-habit {
 
- .today-cell::after {
-     content: '';
-     position: absolute;
-     bottom: 3px;
-     left: 50%;
-     transform: translateX(-50%);
-     width: 4px;
-     height: 4px;
-     background: var(--lavender);
-     border-radius: 50%;
- }
+    0%,
+    100% {
+        transform: scale(1);
+    }
 
- footer {
-     background: var(--deep-amethyst) !important;
-     color: white;
-     margin-top: 2rem;
- }
+    50% {
+        transform: scale(1.2);
+    }
+}
 
- @media (max-width: 768px) {
-     .user-nav {
-         flex-wrap: wrap;
-         gap: 1rem;
-         justify-content: center;
-     }
+.habit-status.status-completed {
+    animation: bounceIn 0.5s ease;
+}
 
-     .user-section {
-         flex-direction: column;
-         gap: 0.5rem;
-     }
+.habit-status.status-completed:hover {
+    animation: pulse-habit 1s infinite;
+}
 
-     .calendar-header {
-         flex-direction: column;
-         gap: 1rem;
-     }
+.calendar-table td:hover .habit-status {
+    transform: scale(1.3);
+}
 
-     .calendar-table th,
-     .calendar-table td {
-         min-width: 30px;
-         padding: 0.35rem;
-         font-size: 0.8rem;
-     }
+/* === Адаптивность === */
+@media screen and (max-width: 768px) {
+    .user-nav {
+        justify-content: center;
+        gap: 1rem;
+    }
 
-     .habit-name {
-         min-width: 100px;
-         max-width: 100px;
-         font-size: 0.85rem;
-     }
- }
+    .calendar-header {
+        flex-direction: column;
+        text-align: center;
+    }
 
- @media (max-width: 480px) {
+    .calendar-table th,
+    .calendar-table td {
+        min-width: 30px;
+        padding: 0.35rem;
+        font-size: 0.8rem;
+    }
 
-     .calendar-table th,
-     .calendar-table td {
-         min-width: 25px;
-         padding: 0.25rem;
-         font-size: 0.75rem;
-     }
+    .habit-name {
+        min-width: 100px;
+        max-width: 100px;
+        font-size: 0.85rem;
+    }
+}
 
-     .habit-name {
-         min-width: 80px;
-         max-width: 80px;
-         font-size: 0.8rem;
-         padding-left: 0.5rem !important;
-     }
+@media screen and (max-width: 480px) {
 
-     .habit-status {
-         font-size: 0.9rem;
-     }
- }
+    .calendar-table th,
+    .calendar-table td {
+        min-width: 25px;
+        padding: 0.25rem;
+        font-size: 0.75rem;
+    }
+
+    .habit-name {
+        min-width: 80px;
+        max-width: 80px;
+        font-size: 0.8rem;
+        padding-left: 0.5rem !important;
+    }
+
+    .habit-status {
+        font-size: 0.9rem;
+    }
+}
 
 
- /* Анимация для статуса привычек */
- .habit-status {
-     transition: all 0.3s ease;
-     display: inline-block;
- }
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    border-bottom: 1px solid rgba(227, 218, 255, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
 
- .habit-status.status-completed {
-     animation: bounceIn 0.5s ease;
- }
+/* Контейнер навигации */
+.top-bar {
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
- @keyframes bounceIn {
-     0% {
-         transform: scale(0.3);
-         opacity: 0;
-     }
+/* Логотип */
+.logo-link {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
 
-     50% {
-         transform: scale(1.1);
-     }
+.logo-link:hover {
+    transform: translateY(-1px);
+}
 
-     100% {
-         transform: scale(1);
-         opacity: 1;
-     }
- }
+.logo-img {
+    width: 56px;
+    height: auto;
+    filter: drop-shadow(0 1px 3px rgba(139, 95, 191, 0.15));
+}
 
- .habit-status.status-completed:hover {
-     animation: pulse-habit 1s infinite;
- }
+/* Меню справа */
+.top-bar-right .menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
- @keyframes pulse-habit {
+/* Ссылки меню */
+.nav-link {
+    color: var(--deep-amethyst);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
 
-     0%,
-     100% {
-         transform: scale(1);
-     }
+.nav-link:hover {
+    color: var(--lavender);
+    background: var(--snow-lavender);
+}
 
-     50% {
-         transform: scale(1.2);
-     }
- }
+.nav-link.active {
+    color: white;
+    background: var(--lavender);
+    font-weight: 700;
+}
 
- /* Анимация при наведении на ячейку календаря */
- .calendar-table td:hover .habit-status {
-     transform: scale(1.3);
- }
+/* Пользователь (иконка + имя + выход) */
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.avatar-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--snow-lavender);
+    padding: 2px;
+    transition: border-color 0.2s ease;
+}
+
+.user-name {
+    color: var(--deep-amethyst);
+    transition: color 0.2s ease;
+}
+
+.logout-link {
+    color: var(--lavender);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.4rem 0.75rem;
+    border: 1.5px solid var(--lavender);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.logout-link:hover {
+    background: var(--lavender);
+    color: white;
+}
+
+/* Hover для всего блока пользователя */
+.user-menu:hover .avatar-icon {
+    border-color: var(--lavender);
+}
+
+.user-menu:hover .user-name {
+    color: var(--lavender);
+}
+
+/* Мобильные */
+@media (max-width: 640px) {
+    .top-bar {
+        padding: 0.5rem;
+    }
+
+    .top-bar-right .menu {
+        gap: 1rem;
+    }
+
+    .nav-link,
+    .user-name,
+    .logout-link {
+        font-size: 0.85rem;
+    }
+
+    .user-name {
+        display: none;
+    }
+
+    .logout-link {
+        padding: 0.35rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}

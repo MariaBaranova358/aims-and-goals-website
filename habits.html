@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
 
 <head>
     <meta charset="UTF-8">
@@ -9,213 +9,212 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <link rel="stylesheet" href="css/blocks/habits.css">
+
+
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="/index.html">
-                    <img src="/images/Логотип.svg" alt="Логотип" width="60" height="65">
-                </a>
 
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/index.html">Главная</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/knowledgebase.html">База знаний</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="user-section">
-                    <img src="/images/account.svg" alt="Аватар" width="32" height="32">
-                    <span>Мария</span>
-                    <a href="/index.html" class="btn btn-outline-custom btn-sm">Выйти</a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- Основная навигация -->
+    <header class="sticky-header">
+        <nav class="top-bar" id="main-nav">
+            <!-- Логотип -->
+            <div class="top-bar-left">
+                <a href="/index.html" class="logo-link">
+                    <img src="/images/Логотип.svg" alt="Логотип" class="logo-img">
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu align-center">
+                    <li><a href="/index.html" class="nav-link">Главная</a></li>
+                    <li><a href="/knowledgebase.html" class="nav-link">База знаний</a></li>
+                    <li class="user-menu">
+                        <img src="/images/account.svg" alt="Аватар" class="avatar-icon">
+                        <span class="user-name">Мария</span>
+                        <a href="/index.html" class="logout-link">Выйти</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section class="py-4">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12">
-                        <!-- Блок пользователя и навигации -->
-                        <div class="main-card p-3 p-md-4 mb-4">
-                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                                <div class="d-flex align-items-center mb-3 mb-md-0">
-                                    <img src="/images/account.svg" alt="Аватар" width="40" height="40">
-                                    <div class="ms-3">
-                                        <h3 class="h5 fw-bold mb-0">Мария</h3>
-                                    </div>
-                                </div>
-                                <nav class="user-nav">
-                                    <a href="/private-office.html">Личный кабинет</a>
-                                    <a href="/goals.html">Мои цели</a>
-                                    <a href="/habits.html" style="color: var(--lavender);">Мои привычки</a>
-                                    <a href="/knowledgebase.html">База знаний</a>
-                                </nav>
-                            </div>
+    <main class="grid-container" style="margin-top: 2rem;">
+        <div class="grid-x grid-margin-x">
+            <div class="cell">
+
+                <!-- Блок пользователя и навигации -->
+                <div class="main-card">
+                    <div class="grid-x grid-margin-x align-middle">
+                        <div class="cell shrink">
+                            <img src="/images/account.svg" alt="Аватар" width="40" height="40">
                         </div>
-
-                        <!-- Календарь привычек на весь месяц -->
-                        <div class="main-card p-3 p-md-4 mb-4">
-                            <div class="calendar-header">
-                                <h2 class="calendar-title">Календарь 2025</h2>
-                                <div class="month-selector">
-                                    <button class="btn btn-outline-custom btn-sm">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </button>
-                                    <span class="month-name">Сентябрь</span>
-                                    <button class="btn btn-outline-custom btn-sm">
-                                        <i class="fas fa-chevron-right"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="calendar-container">
-                                <table class="calendar-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Привычки</th>
-                                            <th>1</th>
-                                            <th>2</th>
-                                            <th>3</th>
-                                            <th>4</th>
-                                            <th>5</th>
-                                            <th>6</th>
-                                            <th>7</th>
-                                            <th>8</th>
-                                            <th>9</th>
-                                            <th>10</th>
-                                            <th>11</th>
-                                            <th>12</th>
-                                            <th>13</th>
-                                            <th>14</th>
-                                            <th>15</th>
-                                            <th>16</th>
-                                            <th>17</th>
-                                            <th>18</th>
-                                            <th>19</th>
-                                            <th>20</th>
-                                            <th>21</th>
-                                            <th>22</th>
-                                            <th>23</th>
-                                            <th>24</th>
-                                            <th>25</th>
-                                            <th>26</th>
-                                            <th>27</th>
-                                            <th>28</th>
-                                            <th>29</th>
-                                            <th>30</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="habit-name">Чтение</td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="habit-name">Спорт</td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                            <td><span class="habit-status status-completed">●</span></td>
-                                            <td><span class="habit-status status-pending">○</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                        <div class="cell auto" style="padding-left: 1rem;">
+                            <h3 class="h5" style="margin: 0; font-weight: 700; color: var(--deep-amethyst);">Мария</h3>
                         </div>
+                    </div>
+                    <div class="user-nav" style="margin-top: 1rem;">
+                        <a href="/private-office.html">Личный кабинет</a>
+                        <a href="/goals.html">Мои цели</a>
+                        <a href="/habits.html" style="color: var(--lavender);">Мои привычки</a>
+                        <a href="/knowledgebase.html">База знаний</a>
+                    </div>
+                </div>
 
-                        <!-- Кнопка новой привычки -->
-                        <div class="text-center">
-                            <button class="btn btn-primary-custom px-4 py-2">
-                                <i class="fas fa-plus me-2"></i>Новая привычка
+                <!-- Календарь привычек -->
+                <div class="main-card">
+                    <div class="calendar-header">
+                        <h2 class="calendar-title">Календарь 2025</h2>
+                        <div class="month-selector">
+                            <button class="btn-outline-custom tiny">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <span class="month-name">Сентябрь</span>
+                            <button class="btn-outline-custom tiny">
+                                <i class="fas fa-chevron-right"></i>
                             </button>
                         </div>
                     </div>
+
+                    <div class="calendar-container">
+                        <table class="calendar-table">
+                            <thead>
+                                <tr>
+                                    <th>Привычки</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                    <th>10</th>
+                                    <th>11</th>
+                                    <th>12</th>
+                                    <th>13</th>
+                                    <th>14</th>
+                                    <th>15</th>
+                                    <th>16</th>
+                                    <th>17</th>
+                                    <th>18</th>
+                                    <th>19</th>
+                                    <th>20</th>
+                                    <th>21</th>
+                                    <th>22</th>
+                                    <th>23</th>
+                                    <th>24</th>
+                                    <th>25</th>
+                                    <th>26</th>
+                                    <th>27</th>
+                                    <th>28</th>
+                                    <th>29</th>
+                                    <th>30</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="habit-name">Чтение</td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="habit-name">Спорт</td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                    <td><span class="habit-status status-completed">●</span></td>
+                                    <td><span class="habit-status status-pending">○</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Кнопка новой привычки -->
+                <div class="text-center">
+                    <button class="btn-primary-custom">
+                        <i class="fas fa-plus"></i> Новая привычка
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
-    <footer class=" py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <p class="mb-0 small">© 2025 Сайт для создания и отслеживания целей и привычек</p>
+    <footer>
+        <div class="grid-container">
+            <div class="grid-x align-center">
+                <div class="cell medium-8 text-center">
+                    <p class="margin-0 small">© 2025 Сайт для создания и отслеживания целей и привычек</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Foundation JS -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
 </body>
 
 </html>
