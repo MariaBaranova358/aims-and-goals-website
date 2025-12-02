@@ -18,14 +18,21 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar navbar-expand-lg">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand" href="/index.html">
                     <img src="/images/Логотип.svg" alt="Логотип" width="77" height="83">
                 </a>
 
-                <div class="collapse navbar-collapse">
+                <!-- Кнопка бургера должна быть ПЕРЕД collapse элементом -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Добавляем правильный id и перемещаем кнопки внутрь -->
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="/index.html">Главная</a>
@@ -34,14 +41,13 @@
                             <a class="nav-link active" href="/knowledgebase.html">База знаний</a>
                         </li>
                     </ul>
+
+                    <!-- Кнопки переносим внутрь collapse -->
+                    <div class="d-flex flex-column flex-lg-row mt-3 mt-lg-0">
+                        <a href="/sign-in-form.html" class="btn btn--outline me-lg-2 mb-2 mb-lg-0">Войти</a>
+                        <a href="/registration.html" class="btn">Начать работу</a>
+                    </div>
                 </div>
-                <div class="d-flex">
-                    <a href="/sign-in-form.html" class="btn btn--outline  me-2">Войти</a>
-                    <a href="/registration.html" class="btn ">Начать работу</a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
             </div>
         </nav>
     </header>
@@ -60,7 +66,7 @@
             </ul>
         </div>
         <section id="target" class="position-relative overflow-hidden">
-            <img src="/images/aims.jpg" alt="Фон" class="w-100" style="height: 70vh; object-fit: cover;">
+            <img src="/images/aims.jpg" alt="Фон" class="w-100 img-fluid" style="height: 70vh; object-fit: cover; max-width: 100%; height: auto;">
 
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
                 <div class="container">
@@ -191,7 +197,7 @@
                 </div>
         </section>
         <section id="habits" class="position-relative overflow-hidden">
-            <img src="/images/habits.jpg" alt="Фон" class="w-100" style="height: 70vh; object-fit: cover;">
+            <img src="/images/habits.jpg" alt="Фон" class="w-100 img-fluid" style="height: 70vh; object-fit: cover; ">
 
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
                 <div class="container">
@@ -223,13 +229,15 @@
                         Вознаграждение удовлетворяет определенную психологическую или физиологическую потребность,
                         закрепляя связь между сигналом и действием.</p>
                     <div class="text-center">
-                        <img src="images/habit-form.jpg" alt="Люди планируют что-то">
+                        <img src="images/habit-form.jpg" alt="Люди планируют что-то" class="img-fluid"
+                            style="max-width: 100%; height: auto;">
                     </div>
                 </div>
             </div>
         </section>
         <section id="motivation" class="position-relative overflow-hidden">
-            <img src="/images/motivatov.png" alt="Фон" class="w-100" style="height: 70vh; object-fit: cover;">
+            <img src="/images/motivatov.png" alt="Фон" class="w-100 img-fluid"
+                style="height: 70vh; object-fit: cover; max-width: 100%; height: auto;">
 
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
                 <div class="container">

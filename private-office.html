@@ -13,105 +13,206 @@
     <link rel="stylesheet" href="css/blocks/private-office.css">
 </head>
 
-<body class="bg-[#C4B0FF] text-[#1E0A3A] min-h-screen grid grid-cols-1 md:grid-cols-[250px_1fr]">
-    <!-- Сайдбар -->
-    <nav class="bg-[#1E0A3A] text-white p-8 md:p-4 fixed md:static w-full md:w-auto h-auto md:h-screen z-10 md:z-auto">
-        <div class="flex justify-between items-center md:block">
-            <div class="logo text-[#B8A1D9] text-xl font-bold mb-8 hidden md:block">
-                <img src="images/Логотип (1).svg" alt="Логотип">
+<body class="bg-[#C4B0FF] text-[#1E0A3A] min-h-screen flex">
+    <!-- Сайдбар для десктопа -->
+    <nav class="bg-[#1E0A3A] text-white p-4 hidden md:block md:w-[250px]">
+        <div class="logo text-[#B8A1D9] text-xl font-bold mb-8">
+            <img src="images/Логотип (1).svg" alt="Логотип" class="h-12 w-auto">
+        </div>
+        
+        <div class="flex flex-col space-y-2">
+            <div class="nav-item bg-[#8B5FBF] text-white px-4 py-3 rounded-lg cursor-pointer">
+                Личный кабинет
             </div>
-            <div class="flex md:flex-col space-x-4 md:space-x-0 overflow-x-auto md:overflow-visible">
-                <div class="nav-item bg-[#8B5FBF] text-white px-4 py-2 rounded-lg cursor-pointer whitespace-nowrap">
-                    Личный кабинет</div>
-                <div
-                    class="nav-item px-4 py-2 rounded-lg cursor-pointer hover:bg-[#2D1B69] transition-all whitespace-nowrap">
-                    <a href="/goals.html" class="text-[#B8A1D9] no-underline">Мои цели</a>
-                </div>
-                <div
-                    class="nav-item px-4 py-2 rounded-lg cursor-pointer hover:bg-[#2D1B69] transition-all whitespace-nowrap">
-                    <a href="/habits.html" class="text-[#B8A1D9] no-underline">Мои привычки</a>
-                </div>
-                <div
-                    class="nav-item px-4 py-2 rounded-lg cursor-pointer hover:bg-[#2D1B69] transition-all whitespace-nowrap">
-                    <a href="/knowledgebase.html" class="text-[#B8A1D9] no-underline">База знаний</a>
-                </div>
+            <div class="nav-item px-4 py-3 rounded-lg cursor-pointer hover:bg-[#2D1B69] transition-all">
+                <a href="/goals.html" class="text-[#B8A1D9] no-underline block">Мои цели</a>
+            </div>
+            <div class="nav-item px-4 py-3 rounded-lg cursor-pointer hover:bg-[#2D1B69] transition-all">
+                <a href="/habits.html" class="text-[#B8A1D9] no-underline block">Мои привычки</a>
+            </div>
+            <div class="nav-item px-4 py-3 rounded-lg cursor-pointer hover:bg-[#2D1B69] transition-all">
+                <a href="/knowledgebase.html" class="text-[#B8A1D9] no-underline block">База знаний</a>
             </div>
         </div>
     </nav>
+    
+    <!-- Мобильная шапка и меню -->
+    <div class="md:hidden fixed top-0 left-0 w-full z-50 mobile-header">
+        <div class="bg-[#1E0A3A] text-white p-4 flex justify-between items-center h-16 relative">
+            <div class="logo">
+                <img src="images/Логотип (1).svg" alt="Логотип" class="h-8 w-auto">
+            </div>
+            
+            <!-- Кнопка бургера меню -->
+            <button class="mobile-menu-btn" id="menuToggle">
+                ☰
+            </button>
+            
+            <!-- Кнопка закрытия меню (изначально скрыта) -->
+            <button class="close-menu" id="closeMenu">
+                ×
+            </button>
+        </div>
+        
+        <!-- Мобильное меню -->
+        <div class="nav-content" id="navContent">
+            <div class="logo text-[#B8A1D9] text-xl font-bold mb-8">
+                <img src="images/Логотип (1).svg" alt="Логотип" class="h-12 w-auto mx-auto">
+            </div>
+            
+            <div class="flex flex-col space-y-2">
+                <div class="nav-item bg-[#8B5FBF] text-white px-4 py-3 rounded-lg cursor-pointer">
+                    Личный кабинет
+                </div>
+                <div class="nav-item px-4 py-3 rounded-lg cursor-pointer hover:bg-[#2D1B69] transition-all">
+                    <a href="/goals.html" class="text-[#B8A1D9] no-underline block">Мои цели</a>
+                </div>
+                <div class="nav-item px-4 py-3 rounded-lg cursor-pointer hover:bg-[#2D1B69] transition-all">
+                    <a href="/habits.html" class="text-[#B8A1D9] no-underline block">Мои привычки</a>
+                </div>
+                <div class="nav-item px-4 py-3 rounded-lg cursor-pointer hover:bg-[#2D1B69] transition-all">
+                    <a href="/knowledgebase.html" class="text-[#B8A1D9] no-underline block">База знаний</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Основной контент -->
-    <main class="md:col-start-2 p-8 mt-16 md:mt-0">
+    <main class="flex-1 p-4 md:p-8 mt-16 md:mt-0">
         <!-- Шапка -->
-        <header class="mb-8">
-            <h1 class="welcome text-2xl font-bold text-[#1E0A3A]">Здравствуйте, Мария! 🍀 Готовы к новым свершениям?
+        <header class="mb-6 md:mb-8">
+            <h1 class="welcome text-xl md:text-2xl font-bold text-[#1E0A3A]">
+                Здравствуйте, Мария! 🍀 Готовы к новым свершениям?
             </h1>
         </header>
 
         <!-- Сетка контента -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Мои привычки -->
-            <section class="bg-white rounded-xl p-6 shadow-lg border border-[#E3DAFF] md:col-span-1">
-                <h2 class="text-[#2D1B69] text-xl font-bold mb-4">Мои привычки</h2>
-                <div class="habit-item flex justify-between items-center py-4 border-b border-[#E3DAFF]">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+            <!-- Все секции... -->
+            <section class="bg-white rounded-xl p-4 md:p-6 shadow-lg border border-[#E3DAFF]">
+                <h2 class="text-[#2D1B69] text-lg md:text-xl font-bold mb-4">Мои привычки</h2>
+                <div class="habit-item flex justify-between items-center py-3 md:py-4 border-b border-[#E3DAFF]">
                     <div>
-                        <div class="habit-name font-medium text-[#1E0A3A]">Утренняя зарядка</div>
-                        <div class="habit-streak text-[#8B5FBF] text-sm">7 дней подряд</div>
+                        <div class="habit-name font-medium text-[#1E0A3A] text-sm md:text-base">Утренняя зарядка</div>
+                        <div class="habit-streak text-[#8B5FBF] text-xs md:text-sm">7 дней подряд</div>
                     </div>
                 </div>
-                <div class="habit-item flex justify-between items-center py-4 border-b border-[#E3DAFF]">
+                <div class="habit-item flex justify-between items-center py-3 md:py-4 border-b border-[#E3DAFF]">
                     <div>
-                        <div class="habit-name font-medium text-[#1E0A3A]">Чтение перед сном</div>
-                        <div class="habit-streak text-[#8B5FBF] text-sm">5 дней подряд</div>
+                        <div class="habit-name font-medium text-[#1E0A3A] text-sm md:text-base">Чтение перед сном</div>
+                        <div class="habit-streak text-[#8B5FBF] text-xs md:text-sm">5 дней подряд</div>
                     </div>
                 </div>
             </section>
 
-            <!-- Прогресс -->
-            <section class="bg-white rounded-xl p-6 shadow-lg border border-[#E3DAFF] md:col-span-1">
-                <h2 class="text-[#2D1B69] text-xl font-bold mb-4">Прогресс привычек</h2>
+            <section class="bg-white rounded-xl p-4 md:p-6 shadow-lg border border-[#E3DAFF]">
+                <h2 class="text-[#2D1B69] text-lg md:text-xl font-bold mb-4">Прогресс привычек</h2>
                 <div class="progress-bar w-full h-2 bg-[#E3DAFF] rounded-full mt-2 overflow-hidden">
                     <div class="progress-fill h-full bg-[#8B5FBF] rounded-full" style="width: 65%;"></div>
                 </div>
-                <p class="text-[#1E0A3A] my-4">Выполнено 65% от плана на неделю</p>
-                <div class="stats grid grid-cols-2 gap-4">
-                    <div class="stat-item text-center p-4 bg-[#E3DAFF] rounded-lg">
-                        <div class="stat-value text-2xl font-bold text-[#8B5FBF]">12</div>
-                        <div class="stat-label text-sm text-[#1E0A3A]">Выполнено</div>
+                <p class="text-[#1E0A3A] my-3 md:my-4 text-sm md:text-base">Выполнено 65% от плана на неделю</p>
+                <div class="stats grid grid-cols-2 gap-3 md:gap-4">
+                    <div class="stat-item text-center p-3 md:p-4 bg-[#E3DAFF] rounded-lg">
+                        <div class="stat-value text-xl md:text-2xl font-bold text-[#8B5FBF]">12</div>
+                        <div class="stat-label text-xs md:text-sm text-[#1E0A3A]">Выполнено</div>
                     </div>
-                    <div class="stat-item text-center p-4 bg-[#E3DAFF] rounded-lg">
-                        <div class="stat-value text-2xl font-bold text-[#8B5FBF]">7</div>
-                        <div class="stat-label text-sm text-[#1E0A3A]">Осталось</div>
+                    <div class="stat-item text-center p-3 md:p-4 bg-[#E3DAFF] rounded-lg">
+                        <div class="stat-value text-xl md:text-2xl font-bold text-[#8B5FBF]">7</div>
+                        <div class="stat-label text-xs md:text-sm text-[#1E0A3A]">Осталось</div>
                     </div>
                 </div>
             </section>
 
-            <!-- Активные цели -->
-            <section class="bg-white rounded-xl p-6 shadow-lg border border-[#E3DAFF] md:col-span-1">
-                <h2 class="text-[#2D1B69] text-xl font-bold mb-4">Активные цели</h2>
-                <div class="goal-item mb-4 pb-4 border-b border-[#E3DAFF]">
-                    <div class="goal-name font-medium text-[#1E0A3A] mb-2">Прочитать 5 книг</div>
-                    <div class="goal-progress text-[#8B5FBF] text-sm mb-2">2 из 5 завершено</div>
+            <section class="bg-white rounded-xl p-4 md:p-6 shadow-lg border border-[#E3DAFF]">
+                <h2 class="text-[#2D1B69] text-lg md:text-xl font-bold mb-4">Активные цели</h2>
+                <div class="goal-item mb-3 md:mb-4 pb-3 md:pb-4 border-b border-[#E3DAFF]">
+                    <div class="goal-name font-medium text-[#1E0A3A] mb-2 text-sm md:text-base">Прочитать 5 книг</div>
+                    <div class="goal-progress text-[#8B5FBF] text-xs md:text-sm mb-2">2 из 5 завершено</div>
                     <div class="progress-bar w-full h-1.5 bg-[#E3DAFF] rounded-full overflow-hidden">
                         <div class="progress-fill h-full bg-[#8B5FBF] rounded-full" style="width: 40%"></div>
                     </div>
                 </div>
-                <div class="goal-item mb-4 pb-4 border-b border-[#E3DAFF]">
-                    <div class="goal-name font-medium text-[#1E0A3A] mb-2">Написать простое приложение на Python</div>
-                    <div class="goal-progress text-[#8B5FBF] text-sm mb-2">7 из 12 завершено</div>
+                <div class="goal-item mb-3 md:mb-4 pb-3 md:pb-4 border-b border-[#E3DAFF]">
+                    <div class="goal-name font-medium text-[#1E0A3A] mb-2 text-sm md:text-base">Написать простое приложение на Python</div>
+                    <div class="goal-progress text-[#8B5FBF] text-xs md:text-sm mb-2">7 из 12 завершено</div>
                     <div class="progress-bar w-full h-1.5 bg-[#E3DAFF] rounded-full overflow-hidden">
                         <div class="progress-fill h-full bg-[#8B5FBF] rounded-full" style="width: 58%"></div>
                     </div>
                 </div>
             </section>
 
-            <!-- Мотивация -->
-            <section class="bg-white rounded-xl p-6 shadow-lg border border-[#E3DAFF] md:col-span-1">
-                <h2 class="text-[#2D1B69] text-xl font-bold mb-4">Моя мотивация</h2>
-                <p class="motivation-text italic text-[#8B5FBF] leading-relaxed font-bold">"Последовательность — ключ к
-                    результату. Каждый маленький шаг имеет значение."</p>
+            <section class="bg-white rounded-xl p-4 md:p-6 shadow-lg border border-[#E3DAFF]">
+                <h2 class="text-[#2D1B69] text-lg md:text-xl font-bold mb-4">Моя мотивация</h2>
+                <p class="motivation-text italic text-[#8B5FBF] leading-relaxed font-bold text-sm md:text-base">
+                    "Последовательность — ключ к результату. Каждый маленький шаг имеет значение."
+                </p>
             </section>
         </div>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const closeMenu = document.getElementById('closeMenu');
+            const navContent = document.getElementById('navContent');
+            
+            // Проверяем, что элементы существуют (только на мобильных)
+            if (!menuToggle || !closeMenu || !navContent) return;
+            
+            // Функция открытия меню
+            function openMenu() {
+                navContent.classList.add('active');
+                menuToggle.style.display = 'none';
+                closeMenu.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Функция закрытия меню
+            function closeMenuFunc() {
+                navContent.classList.remove('active');
+                menuToggle.style.display = 'block';
+                closeMenu.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+            
+            // Открытие меню по клику на бургер
+            menuToggle.addEventListener('click', openMenu);
+            
+            // Закрытие меню по клику на крестик
+            closeMenu.addEventListener('click', closeMenuFunc);
+            
+            // Закрытие меню по клику на ссылку в меню
+            document.querySelectorAll('#navContent .nav-item a').forEach(link => {
+                link.addEventListener('click', closeMenuFunc);
+            });
+            
+            // Закрытие меню по клику вне меню
+            document.addEventListener('click', function(event) {
+                // Проверяем, куда был клик
+                const isClickInsideMenu = navContent.contains(event.target);
+                const isClickOnBurger = menuToggle.contains(event.target);
+                const isClickOnClose = closeMenu.contains(event.target);
+                
+                // Если меню открыто и клик был не по меню, не по бургеру и не по крестику
+                if (navContent.classList.contains('active') && 
+                    !isClickInsideMenu && 
+                    !isClickOnBurger && 
+                    !isClickOnClose) {
+                    closeMenuFunc();
+                }
+            });
+            
+            // Закрытие меню по нажатию Escape
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && navContent.classList.contains('active')) {
+                    closeMenuFunc();
+                }
+            });
+            
+            // Инициализация - скрываем крестик при загрузке
+            closeMenu.style.display = 'none';
+        });
+    </script>
 </body>
 
 </html>

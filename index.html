@@ -24,7 +24,14 @@
                     <img src="/images/Логотип.svg" alt="Логотип" width="77" height="83">
                 </a>
 
-                <div class="collapse navbar-collapse">
+                <!-- Кнопка бургера должна быть ПЕРЕД collapse элементом -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Добавляем правильный id и перемещаем кнопки внутрь -->
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link active" href="/index.html">Главная</a>
@@ -33,14 +40,13 @@
                             <a class="nav-link" href="/knowledgebase.html">База знаний</a>
                         </li>
                     </ul>
+
+                    <!-- Кнопки переносим внутрь collapse -->
+                    <div class="d-flex flex-column flex-lg-row mt-3 mt-lg-0">
+                        <a href="/sign-in-form.html" class="btn btn--outline me-lg-2 mb-2 mb-lg-0">Войти</a>
+                        <a href="/registration.html" class="btn">Начать работу</a>
+                    </div>
                 </div>
-                <div class="d-flex">
-                    <a href="/sign-in-form.html" class="btn btn--outline  me-2">Войти</a>
-                    <a href="/registration.html" class="btn ">Начать работу</a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
             </div>
         </nav>
     </header>

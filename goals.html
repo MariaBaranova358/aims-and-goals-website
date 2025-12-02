@@ -16,34 +16,43 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="/index.html">
-                    <img src="/images/Логотип.svg" alt="Логотип" width="77" height="83">
-                </a>
+<header class="header shadow-sm bg-white">
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container">
+            <!-- Логотип -->
+            <a class="navbar-brand" href="/index.html">
+                <img src="/images/Логотип.svg" alt="Логотип" width="60" height="65">
+            </a>
 
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/index.html">Главная</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/knowledgebase.html">База знаний</a>
-                        </li>
-                    </ul>
+            <!-- Кнопка бургер-меню для мобильных -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Основное меню -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/knowledgebase.html">База знаний</a>
+                    </li>
+                </ul>
+
+                <!-- Правая часть: пользователь + выход -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex align-items-center">
+                        <img src="/images/account.svg" alt="Аватар" width="36" height="36" class="rounded-circle me-2">
+                        <span class="d-none d-md-inline fw-medium">Мария</span>
+                    </div>
+                    <a href="/index.html" class="btn btn-outline-danger btn-sm px-4">Выйти</a>
                 </div>
-                <div class="user-section">
-                    <img src="/images/account.svg" alt="Аватар" width="32" height="32">
-                    <span>Мария</span>
-                    <a href="/index.html" class="btn btn-outline-custom btn-sm">Выйти</a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 
     <main>
         <section class="py-4">

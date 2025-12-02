@@ -26,3 +26,99 @@ body {
     animation: progressFill 1.5s ease-in-out;
     transform-origin: left;
 }
+
+   @media (max-width: 768px) {
+            /* Скрываем меню по умолчанию */
+            .nav-content {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: #1E0A3A;
+                padding: 80px 20px 20px;
+                z-index: 90;
+                overflow-y: auto;
+            }
+            
+            /* Когда меню открыто */
+            .nav-content.active {
+                display: block;
+            }
+            
+            .nav-content .logo {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            .nav-content .flex {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-item {
+                width: 100%;
+                text-align: center;
+                padding: 12px !important;
+            }
+            
+            .nav-item a {
+                display: block;
+                width: 100%;
+            }
+            
+            /* Стили для кнопок */
+            .mobile-menu-btn, .close-menu {
+                background: none;
+                border: none;
+                color: white;
+                font-size: 24px;
+                cursor: pointer;
+                padding: 10px;
+                position: absolute;
+                right: 20px;
+                top: 5px;
+                z-index: 100;
+            }
+            
+            .close-menu {
+                display: none;
+                font-size: 32px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            /* На мобильных main идет с отступом сверху */
+            main {
+                margin-left: 0 !important;
+                width: 100% !important;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            /* На десктопе фиксируем сайдбар и отступаем основной контент */
+            nav {
+                position: fixed;
+                left: 0;
+                top: 0;
+                height: 100vh;
+                width: 250px;
+            }
+            
+            main {
+                margin-left: 250px;
+                width: calc(100% - 250px);
+            }
+            
+            /* Скрываем мобильную шапку на десктопе */
+            .mobile-header {
+                display: none;
+            }
+            
+            .mobile-menu-btn, .close-menu {
+                display: none !important;
+            }
+        }

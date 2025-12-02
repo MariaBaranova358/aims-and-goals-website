@@ -20,6 +20,21 @@
     max-width: 1096px;
 }
 
+.knowledge__title {
+    font-size: clamp(28px, 5vw, 64px);
+    max-width: min(1096px, 95%);
+    line-height: 1.2;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 991.98px) {
+    .knowledge__title {
+        padding: 0 20px;
+        font-size: clamp(32px, 4.5vw, 48px);
+    }
+}
+
 .hero-banner {
     background: url('/images/banner.jpg') center/cover;
     height: 640px;
